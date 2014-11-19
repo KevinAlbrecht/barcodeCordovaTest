@@ -1,0 +1,47 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"wp-package\" value=\"BarcodeScanner\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"wp-package\" value=\"Camera\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "Properties/WMAppManifest.xml": {
+                "parents": {
+                    "/Deployment/App/Capabilities": [
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_ISV_CAMERA\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_MEDIALIB_PHOTO\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.phonegap.plugins.barcodescanner": {
+            "PACKAGE_NAME": "{b888ee10-7000-11e4-9f71-59b81d5d2048}"
+        },
+        "org.apache.cordova.camera": {
+            "PACKAGE_NAME": "{b888ee10-7000-11e4-9f71-59b81d5d2048}"
+        }
+    },
+    "dependent_plugins": {}
+}
